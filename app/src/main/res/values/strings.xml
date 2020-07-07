@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">BracU Course Materials</string>
+    <string name="home">Home</string>
+    <string name="tools">Tools</string>
+    <string name="account">Account</string>
+    <string name="user_name">User Name</string>
+    <string name="demo_user_email">demo@user.com</string>
+    <string name="sign_out">Sign Out</string>
+    <string name="sign_in_with_google">Sign In With Google</string>
+    <string name="not_available">Not Available</string>
+</resources>

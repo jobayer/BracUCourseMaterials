@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "828783384050",
+    "firebase_url": "https://bracu-course-materials.firebaseio.com",
+    "project_id": "bracu-course-materials",
+    "storage_bucket": "bracu-course-materials.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:828783384050:android:66f368a5798d9da554c76b",
+        "android_client_info": {
+          "package_name": "com.jobayr.bcm"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "828783384050-diis2ur1f095nhu7b0ai3fbbp0p3g2kb.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.jobayr.bcm",
+            "certificate_hash": "c8d72807c7aab4341be375fe1306313dbff80368"
+          }
+        },
+        {
+          "client_id": "828783384050-0681h4mmdoi1v38r5ctafasq8680reno.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCuZ2q4eC_iXgJM7SkrDKlbnlHavpFqwVk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "828783384050-0681h4mmdoi1v38r5ctafasq8680reno.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -2,10 +2,11 @@ package com.jobayr.bcm.extensions
 
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
+import com.google.android.material.appbar.MaterialToolbar
 import com.jobayr.bcm.R
 
-fun AppCompatActivity.initToolbar(title: String) {
-    supportActionBar?.title = title
+fun AppCompatActivity.initToolbar(toolbar: MaterialToolbar) {
+    setSupportActionBar(toolbar)
     supportActionBar?.setDisplayHomeAsUpEnabled(true)
     supportActionBar?.setHomeAsUpIndicator(resources.getDrawable(R.drawable.icon_back, theme))
 }

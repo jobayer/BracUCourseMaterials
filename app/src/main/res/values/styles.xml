@@ -1,12 +1,6 @@
 <resources>
 
-    <style name="AppTheme" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
-        <item name="colorPrimary">@color/colorPrimary</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
-        <item name="colorAccent">@color/colorAccent</item>
-    </style>
-
-    <style name="HomeTheme" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+    <style name="AppTheme" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
@@ -14,6 +8,10 @@
 
     <style name="CenterTextStyle" parent="TextAppearance.AppCompat.Widget.ActionBar.Title">
         <item name="android:layout_gravity">center</item>
+    </style>
+
+    <style name="CustomFontToolbarStyle" parent="TextAppearance.AppCompat.Title">
+        <item name="fontFamily">@font/acme</item>
     </style>
 
 </resources>

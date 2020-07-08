@@ -1,23 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
         android:id="@+id/navItemHome"
         android:icon="@drawable/icon_home"
-        android:title="@string/home"
-        app:cnb_iconColor="@color/colorPrimary" />
+        android:title="@string/home" />
 
     <item
         android:id="@+id/navItemTools"
         android:icon="@drawable/icon_tools"
-        android:title="@string/tools"
-        app:cnb_iconColor="@color/colorPrimary" />
+        android:title="@string/tools" />
 
     <item
         android:id="@+id/navItemAccount"
         android:icon="@drawable/icon_person"
-        android:title="@string/account"
-        app:cnb_iconColor="@color/colorPrimary" />
+        android:title="@string/account" />
 
 </menu>

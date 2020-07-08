@@ -29,16 +29,17 @@
         android:id="@+id/fragContainer"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_above="@id/mainNavBar"
+        android:layout_above="@id/mainBottomBar"
         android:layout_below="@id/mainToolbar" />
 
-    <com.ismaeldivita.chipnavigation.ChipNavigationBar
-        android:id="@+id/mainNavBar"
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/mainBottomBar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:background="@color/white"
-        app:cnb_menuResource="@menu/nav_menu" />
+        app:menu="@menu/nav_menu"
+        app:labelVisibilityMode="selected"/>
 
 </RelativeLayout>

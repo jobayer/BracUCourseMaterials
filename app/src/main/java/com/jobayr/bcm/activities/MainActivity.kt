@@ -30,12 +30,12 @@ class MainActivity : AppCompatActivity() {
             fragManager.beginTransaction().hide(activeFrag).show(homeFrag).commit()
             activeFrag = homeFrag
             activeFragIndex = 0
-            mainNavBar.setItemSelected(R.id.navItemHome)
+            mainBottomBar.selectedItemId = R.id.navItemHome
         } else finishAffinity()
     }
 
     private fun init() {
-        mainNavBar.setItemSelected(R.id.navItemHome)
+//        mainBottomBar.setItemSelected(R.id.navItemHome)
         initCallback()
         initFrags()
     }
@@ -55,8 +55,8 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun initCallback() {
-        mainNavBar.setOnItemSelectedListener {
-            when(it) {
+        mainBottomBar.setOnNavigationItemSelectedListener {
+            when(it.itemId) {
                 R.id.navItemHome -> {
                     if (activeFragIndex != 0) {
                         fragManager.beginTransaction().hide(activeFrag).show(homeFrag).commit()
@@ -79,6 +79,7 @@ class MainActivity : AppCompatActivity() {
                     }
                 }
             }
+            true
         }
     }
 

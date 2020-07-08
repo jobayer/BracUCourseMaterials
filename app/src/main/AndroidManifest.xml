@@ -16,9 +16,17 @@
         android:theme="@style/AppTheme"
         tools:ignore="AllowBackup">
         <activity
+            android:name=".activities.NotesActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.SlidesActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.BooksActivity"
+            android:screenOrientation="portrait" />
+        <activity
             android:name=".activities.MainActivity"
-            android:screenOrientation="portrait"
-            android:theme="@style/HomeTheme">
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

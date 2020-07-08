@@ -9,11 +9,13 @@ import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.card.MaterialCardView
 import com.google.android.material.textview.MaterialTextView
 import com.jobayr.bcm.R
+import com.jobayr.bcm.activities.BookViewActivity
+import com.jobayr.bcm.extensions.openOnClick
 import com.jobayr.bcm.models.Book
 
 class BookAdapter(
-    val activity: Activity,
-    val items: MutableList<Book>
+    private val activity: Activity,
+    private val items: MutableList<Book>
 ) : RecyclerView.Adapter<BookAdapter.BookVH>() {
 
     class BookVH(view: View) : RecyclerView.ViewHolder(view) {
@@ -33,7 +35,7 @@ class BookAdapter(
     }
 
     override fun onBindViewHolder(holder: BookVH, position: Int) {
-
+        holder.rootView.openOnClick(BookViewActivity::class.java)
     }
 
 }

@@ -8,4 +8,5 @@
     <color name="black">@android:color/black</color>
     <color name="transparent">@android:color/transparent</color>
     <color name="softWhite">#eeeeee</color>
+    <color name="tomatoRed">#e53935</color>
 </resources>

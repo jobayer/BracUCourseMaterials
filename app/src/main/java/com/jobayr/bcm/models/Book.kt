@@ -5,6 +5,7 @@ import kotlinx.android.parcel.Parcelize
 
 @Parcelize
 data class Book(
+    var nodeKey: String? = null,
     var name: String? = null,
     var edition: String? = null,
     var author: String? = null,
@@ -14,4 +15,6 @@ data class Book(
     var uploaderID: String? = null,
     var departmentID: Int? = null,
     var uploadDate: Long? = null
-) : Parcelable
+) : Parcelable {
+    constructor(): this(null)
+}

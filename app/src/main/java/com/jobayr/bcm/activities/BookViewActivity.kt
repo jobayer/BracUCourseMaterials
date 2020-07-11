@@ -1,6 +1,7 @@
 package com.jobayr.bcm.activities
 
 import android.os.Bundle
+import android.view.Menu
 import android.view.MenuItem
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
@@ -18,6 +19,11 @@ class BookViewActivity : AppCompatActivity() {
         setContentView(R.layout.activity_book_view)
         initToolbar(bookViewToolbar)
         init()
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        menuInflater.inflate(R.menu.menu_book_view, menu)
+        return super.onCreateOptionsMenu(menu)
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {

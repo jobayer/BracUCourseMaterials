@@ -30,15 +30,15 @@
                 android:orientation="vertical">
 
                 <com.google.android.material.card.MaterialCardView
-                    android:layout_width="64dp"
-                    android:layout_height="64dp"
-                    app:cardCornerRadius="32dp"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    app:cardCornerRadius="40dp"
                     app:cardElevation="0dp">
 
                     <androidx.appcompat.widget.AppCompatImageView
                         android:id="@+id/userImageView"
-                        android:layout_width="64dp"
-                        android:layout_height="64dp"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
                         android:scaleType="fitCenter"
                         app:srcCompat="@drawable/image_user" />
 
@@ -51,7 +51,8 @@
                     android:layout_height="wrap_content"
                     android:gravity="center"
                     android:text="@string/user_name"
-                    android:textColor="@color/colorPrimary" />
+                    android:textColor="@color/colorPrimary"
+                    app:fontFamily="@font/acme" />
 
                 <androidx.appcompat.widget.AppCompatTextView
                     android:id="@+id/userEmailView"
@@ -62,21 +63,35 @@
                     android:text="@string/demo_user_email" />
 
                 <com.google.android.material.button.MaterialButton
+                    android:id="@+id/userDeptBtn"
+                    android:visibility="gone"
+                    style="@style/Widget.MaterialComponents.Button.TextButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"/>
+
+                <com.google.android.material.button.MaterialButton
                     android:id="@+id/signInBtn"
                     style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_margin="16dp"
-                    android:text="@string/sign_in_with_google" />
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginBottom="16dp"
+                    android:text="@string/sign_in_with_google"
+                    app:fontFamily="@font/acme" />
 
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/signOutBtn"
                     style="@style/Widget.MaterialComponents.Button.OutlinedButton"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_margin="16dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginBottom="16dp"
                     android:text="@string/sign_out"
-                    android:visibility="gone" />
+                    android:visibility="gone"
+                    app:fontFamily="@font/acme" />
 
             </LinearLayout>
 

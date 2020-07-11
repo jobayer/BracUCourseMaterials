@@ -9,4 +9,8 @@
     <string name="sign_in_with_google">Sign In With Google</string>
     <string name="not_available">Not Available</string>
     <string name="sort">Sort</string>
+    <string name="report_book">Report Book</string>
+    <string name="download_book">Download Book</string>
+    <string name="share">Share</string>
+    <string name="garage_frag_sign_in_hint">Sign in with your Google account to add new books, slides and notes. In addition, you can save your favorite items as a signed in user!!</string>
 </resources>

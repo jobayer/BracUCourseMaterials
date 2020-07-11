@@ -7,14 +7,14 @@ import androidx.fragment.app.FragmentManager
 import com.jobayr.bcm.R
 import com.jobayr.bcm.fragments.AccountFragment
 import com.jobayr.bcm.fragments.HomeFragment
-import com.jobayr.bcm.fragments.ToolsFragment
+import com.jobayr.bcm.fragments.GarageFragment
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
 
     private lateinit var fragManager: FragmentManager
     private lateinit var homeFrag: HomeFragment
-    private lateinit var toolsFrag: ToolsFragment
+    private lateinit var garageFrag: GarageFragment
     private lateinit var accountFrag: AccountFragment
     private lateinit var activeFrag: Fragment
     private var activeFragIndex = 0
@@ -35,7 +35,6 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun init() {
-//        mainBottomBar.setItemSelected(R.id.navItemHome)
         initCallback()
         initFrags()
     }
@@ -43,12 +42,12 @@ class MainActivity : AppCompatActivity() {
     private fun initFrags() {
         fragManager = supportFragmentManager
         homeFrag = HomeFragment()
-        toolsFrag = ToolsFragment()
+        garageFrag = GarageFragment()
         accountFrag = AccountFragment()
         fragManager.beginTransaction().add(R.id.fragContainer, accountFrag)
             .hide(accountFrag).commit()
-        fragManager.beginTransaction().add(R.id.fragContainer, toolsFrag)
-            .hide(toolsFrag).commit()
+        fragManager.beginTransaction().add(R.id.fragContainer, garageFrag)
+            .hide(garageFrag).commit()
         fragManager.beginTransaction().add(R.id.fragContainer, homeFrag)
             .commit()
         activeFrag = homeFrag
@@ -66,8 +65,8 @@ class MainActivity : AppCompatActivity() {
                 }
                 R.id.navItemTools -> {
                     if (activeFragIndex != 1) {
-                        fragManager.beginTransaction().hide(activeFrag).show(toolsFrag).commit()
-                        activeFrag = toolsFrag
+                        fragManager.beginTransaction().hide(activeFrag).show(garageFrag).commit()
+                        activeFrag = garageFrag
                         activeFragIndex = 1
                     }
                 }
@@ -80,6 +79,19 @@ class MainActivity : AppCompatActivity() {
                 }
             }
             true
+        }
+    }
+
+    fun changeFrag(index: Int) {
+        when(index) {
+            2 -> {
+                if (activeFragIndex != 2) {
+                    mainBottomBar.selectedItemId = R.id.navItemAccount
+                    fragManager.beginTransaction().hide(activeFrag).show(accountFrag).commit()
+                    activeFrag = accountFrag
+                    activeFragIndex = 2
+                }
+            }
         }
     }
 

@@ -3,89 +3,70 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/bookItemRootView"
     android:layout_width="match_parent"
-    android:layout_height="100dp"
+    android:layout_height="85dp"
     android:layout_gravity="center"
     android:layout_marginStart="12dp"
     android:layout_marginEnd="12dp"
     android:layout_marginBottom="12dp"
-    android:clickable="true"
-    android:focusable="true"
     app:cardCornerRadius="6dp"
     app:cardElevation="1dp">
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:gravity="center_vertical"
-        android:orientation="horizontal"
-        android:weightSum="10">
+        android:orientation="vertical"
+        android:padding="8dp">
 
-        <androidx.appcompat.widget.AppCompatImageView
-            android:id="@+id/bookItemCoverImageView"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="2"
-            android:scaleType="centerCrop"
-            app:srcCompat="@drawable/book_cover" />
-
-        <LinearLayout
-            android:layout_width="0dp"
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/bookItemBookNameView"
+            style="@style/TextAppearance.MaterialComponents.Subtitle1"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="8"
-            android:gravity="center_vertical"
-            android:orientation="vertical"
-            android:padding="8dp">
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textColor="@color/colorPrimary"
+            android:textStyle="bold"
+            app:fontFamily="@font/acme" />
 
-            <com.google.android.material.textview.MaterialTextView
-                android:id="@+id/bookItemBookNameView"
-                style="@style/TextAppearance.MaterialComponents.Headline6"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:ellipsize="end"
-                android:maxLines="1"
-                android:text="The Art Of Electronics"
-                android:textColor="@color/colorPrimary"
-                android:textStyle="bold" />
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/bookItemAuthorEdView"
+            style="@style/TextAppearance.MaterialComponents.Body2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textStyle="bold" />
 
-            <com.google.android.material.textview.MaterialTextView
-                android:id="@+id/bookItemAuthorEdView"
-                style="@style/TextAppearance.MaterialComponents.Body1"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Paul Horowitz • 3rd Edition"
-                android:textStyle="bold" />
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            app:cardBackgroundColor="#f5f5f5"
+            app:cardCornerRadius="6dp"
+            app:cardElevation="0dp">
 
-            <com.google.android.material.card.MaterialCardView
+            <LinearLayout
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="2dp"
-                app:cardBackgroundColor="#f5f5f5"
-                app:cardCornerRadius="6dp"
-                app:cardElevation="0dp">
+                android:layout_height="wrap_content">
 
-                <LinearLayout
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/bookItemDeptView"
+                    style="@style/TextAppearance.MaterialComponents.Body2"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="6dp"
+                    android:layout_marginTop="1dp"
+                    android:layout_marginEnd="6dp"
+                    android:layout_marginBottom="2dp"
+                    android:gravity="center"
+                    android:text="EEE"
+                    android:textStyle="bold" />
 
-                    <com.google.android.material.textview.MaterialTextView
-                        android:id="@+id/bookItemDeptView"
-                        style="@style/TextAppearance.MaterialComponents.Body2"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:layout_marginStart="6dp"
-                        android:layout_marginTop="1dp"
-                        android:layout_marginEnd="6dp"
-                        android:layout_marginBottom="2dp"
-                        android:gravity="center"
-                        android:text="EEE"
-                        android:textStyle="bold" />
+            </LinearLayout>
 
-                </LinearLayout>
-
-            </com.google.android.material.card.MaterialCardView>
-
-        </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
 
     </LinearLayout>
 

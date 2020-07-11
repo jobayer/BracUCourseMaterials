@@ -13,6 +13,12 @@ import com.google.android.gms.auth.api.signin.GoogleSignInOptions
 import com.google.android.gms.common.api.ApiException
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.GoogleAuthProvider
+import com.google.firebase.database.DataSnapshot
+import com.google.firebase.database.DatabaseError
+import com.google.firebase.database.DatabaseReference
+import com.google.firebase.database.ValueEventListener
+import com.google.firebase.database.ktx.database
+import com.google.firebase.ktx.Firebase
 import com.jobayr.bcm.R
 import com.jobayr.bcm.activities.MainActivity
 import com.jobayr.bcm.extensions.*
@@ -24,6 +30,7 @@ class AccountFragment : Fragment() {
     private lateinit var rootView: View
     private lateinit var googleSignInClient: GoogleSignInClient
     private lateinit var firebaseAuth: FirebaseAuth
+    private lateinit var firebaseDB: DatabaseReference
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -36,6 +43,7 @@ class AccountFragment : Fragment() {
 
     private fun init() {
         firebaseAuth = FirebaseAuth.getInstance()
+        firebaseDB = Firebase.database.reference
         initUI()
         initData()
         createSignInRequest()
@@ -114,6 +122,19 @@ class AccountFragment : Fragment() {
                     showErrorToast("Failed To Sign In")
                 }
             }
+    }
+
+    private fun getOrCreateUser() {
+       firebaseAuth.currentUser!!.uid.let {
+           firebaseDB.child("users/$it")
+               .addListenerForSingleValueEvent(object : ValueEventListener {
+                   override fun onCancelled(error: DatabaseError) {}
+
+                   override fun onDataChange(snapshot: DataSnapshot) {
+
+                   }
+               })
+       }
     }
 
 }

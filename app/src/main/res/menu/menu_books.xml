@@ -3,9 +3,15 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <item
-        android:id="@+id/menuItemBooksSort"
-        android:icon="@drawable/icon_sort_ass"
+        android:id="@+id/booksMenuItemBooksFilter"
+        android:icon="@drawable/icon_filter"
+        android:title="Filter"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/booksMenuItemBooksSort"
+        android:icon="@drawable/icon_sort_num"
         android:title="@string/sort"
-        app:showAsAction="always"/>
+        app:showAsAction="ifRoom" />
 
 </menu>

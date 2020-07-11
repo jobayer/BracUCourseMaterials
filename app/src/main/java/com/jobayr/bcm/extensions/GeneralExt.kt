@@ -36,3 +36,29 @@ fun View.openOnClick(className: Class<*>) {
         context.startActivity(Intent(context, className))
     }
 }
+
+fun getDeptList(): MutableList<String> {
+    val list = mutableListOf<String>()
+    list.add("ARC")
+    list.add("CSE")
+    list.add("EEE")
+    list.add("ENG")
+    list.add("ESS")
+    list.add("MNS")
+    list.add("PHR")
+    return list
+}
+
+fun getDeptName(index: Int): String? {
+    var name: String? = null
+    when(index) {
+        0 -> name = "ARC"
+        1 -> name = "CSE"
+        2 -> name = "EEE"
+        3 -> name = "ENG"
+        4 -> name = "ESS"
+        5 -> name = "MNS"
+        6 -> name = "PHR"
+    }
+    return name
+}
